@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khảo Sát Khẩu Vị Rủi Ro & Phong Cách Đầu Tư</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c-dark-blue: #213a57;
+            --c-dark-cyan: #0b6477;
+            --c-light-green: #80ed99;
+            --c-mid-cyan: #14919B;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f0f4f8; }
+        .form-section { border-left: 3px solid var(--c-mid-cyan); padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 2rem; }
+        .radio-label:has(input:checked), .checkbox-label:has(input:checked) { background-color: rgba(128, 237, 153, 0.2); border-color: var(--c-dark-cyan); color: var(--c-dark-blue); }
+        .required-dot::after { content: ' *'; color: #ef4444; }
+        .main-title { color: var(--c-dark-blue); }
+        .section-title { color: var(--c-dark-cyan); }
+        .submit-btn { background-color: var(--c-dark-cyan); color: white; transition: background-color 0.3s ease; }
+        .submit-btn:hover:not(:disabled) { background-color: var(--c-mid-cyan); }
+        .submit-btn:disabled { background-color: #9ca3af; cursor: not-allowed; }
+        .form-input { border-color: #d1d5db; }
+        .form-input:focus { --tw-ring-color: var(--c-mid-cyan); border-color: var(--c-mid-cyan); }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto max-w-3xl p-4 sm:p-6 md:p-8">
+        <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
+            <div class="text-center border-b pb-6 mb-6">
+                <h1 class="text-2xl sm:text-3xl font-bold main-title">Khảo Sát Khẩu Vị Rủi Ro & Phong Cách Đầu&nbsp;Tư</h1>
+                <p class="mt-3 text-gray-600 text-justify">
+                    Cảm ơn Quý Anh/Chị đã tin tưởng đồng hành cùng TTTV-BSC trên hành trình đầu tư. Để có thể đưa ra những tư vấn "chuẩn gu" nhất, chúng tôi đã tạo ra một bản khảo sát nhỏ, chỉ mất 5 phút để hoàn thành. Kết quả sẽ giúp chúng tôi hiểu rõ hơn về mục tiêu và phong cách của Quý Anh/Chị, từ đó đưa ra những gợi ý phù hợp.
+                </p>
+            </div>
+
+            <form id="surveyForm">
+                <div class="form-section">
+                    <h2 class="text-xl font-semibold section-title mb-4">Phần A: "Check-in" Nhanh Thông Tin Cá Nhân</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <label for="fullName" class="block text-md font-medium text-gray-700 required-dot">Họ và tên đầy đủ</label>
+                            <input type="text" id="fullName" name="Họ và tên" class="form-input mt-1 block w-full rounded-md shadow-sm focus:ring" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-md font-medium text-gray-700 required-dot">Email nhận phản hồi khi hoàn thành khảo sát</label>
+                            <input type="email" id="email" name="Email" class="form-input mt-1 block w-full rounded-md shadow-sm focus:ring" required>
+                        </div>
+                        <div>
+                            <label class="block text-md font-medium text-gray-700 required-dot">Giới tính của bạn</label>
+                            <div class="mt-2 space-y-2">
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Giới tính" value="Nam" class="h-4 w-4" required><span class="ml-3">Nam</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Giới tính" value="Nữ" class="h-4 w-4"><span class="ml-3">Nữ</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Giới tính" value="Khác" class="h-4 w-4"><span class="ml-3">Khác</span></label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-md font-medium text-gray-700 required-dot">Bạn thuộc thế hệ nào?</label>
+                            <div class="mt-2 space-y-2">
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Thế hệ" value="Gen Z (Dưới 25 tuổi)" required class="h-4 w-4"><span class="ml-3">Gen Z chính hiệu (Dưới 25 tuổi)</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Thế hệ" value="Millennials (26-40 tuổi)" class="h-4 w-4"><span class="ml-3">Millennials năng động (26-40 tuổi)</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Thế hệ" value="Gen X (41-55 tuổi)" class="h-4 w-4"><span class="ml-3">Gen X vững vàng (41-55 tuổi)</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Thế hệ" value="Baby Boomer (Trên 55 tuổi)" class="h-4 w-4"><span class="ml-3">Baby Boomer kinh nghiệm (Trên 55 tuổi)</span></label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-md font-medium text-gray-700 required-dot">Lĩnh vực công việc chính của bạn là gì?</label>
+                            <div class="mt-2 space-y-2">
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Lĩnh vực công việc" value="Công nghệ thông tin / Kỹ thuật" required class="h-4 w-4"><span class="ml-3">Công nghệ thông tin / Kỹ thuật</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Lĩnh vực công việc" value="Tài chính / Ngân hàng / Kế toán" class="h-4 w-4"><span class="ml-3">Tài chính / Ngân hàng / Kế toán</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Lĩnh vực công việc" value="Kinh doanh / Marketing / Bán hàng" class="h-4 w-4"><span class="ml-3">Kinh doanh / Marketing / Bán hàng</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Lĩnh vực công việc" value="Sản xuất / Xây dựng" class="h-4 w-4"><span class="ml-3">Sản xuất / Xây dựng</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Lĩnh vực công việc" value="Giáo dục / Y tế / Dịch vụ công" class="h-4 w-4"><span class="ml-3">Giáo dục / Y tế / Dịch vụ công</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Lĩnh vực công việc" value="Sáng tạo / Nghệ thuật / Giải trí" class="h-4 w-4"><span class="ml-3">Sáng tạo / Nghệ thuật / Giải trí</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Lĩnh vực công việc" value="Tự kinh doanh / Freelancer" class="h-4 w-4"><span class="ml-3">Tự kinh doanh / Freelancer</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Lĩnh vực công việc" value="Khác" class="h-4 w-4"><span class="ml-3">Khác</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2 class="text-xl font-semibold section-title mb-4">Phần B: "Flex" Sức Khỏe Tài Chính (Đánh giá Risk Capacity)</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-md font-medium text-gray-700 required-dot">"Dòng tiền" hàng tháng của bạn đến từ đâu là chủ yếu?</label>
+                            <div class="mt-2 space-y-2">
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Nguồn thu nhập" value="Lương cố định, rất ổn định" required class="h-4 w-4"><span class="ml-3">Lương cố định, rất ổn định.</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Nguồn thu nhập" value="Thu nhập từ kinh doanh, có biến động" class="h-4 w-4"><span class="ml-3">Thu nhập từ kinh doanh, có biến động.</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Nguồn thu nhập" value="Lương + thưởng theo hiệu quả, tương đối ổn định" class="h-4 w-4"><span class="ml-3">Lương + thưởng theo hiệu quả, tương đối ổn định.</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Nguồn thu nhập" value="Công việc tự do, thu nhập không đều" class="h-4 w-4"><span class="ml-3">Công việc tự do, thu nhập không đều.</span></label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-md font-medium text-gray-700 required-dot">Mỗi tháng, bạn thường "trích lương" để tiết kiệm/đầu tư bao nhiêu?</label>
+                            <div class="mt-2 space-y-2">
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Tỷ lệ tiết kiệm/đầu tư" value="Dưới 10% thu nhập" required class="h-4 w-4"><span class="ml-3">Dưới 10% thu nhập.</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Tỷ lệ tiết kiệm/đầu tư" value="10% - 30% thu nhập" class="h-4 w-4"><span class="ml-3">10% - 30% thu nhập.</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Tỷ lệ tiết kiệm/đầu tư" value="30% - 50% thu nhập" class="h-4 w-4"><span class="ml-3">30% - 50% thu nhập.</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Tỷ lệ tiết kiệm/đầu tư" value="Trên 50% thu nhập" class="h-4 w-4"><span class="ml-3">Trên 50% thu nhập.</span></label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-md font-medium text-gray-700 required-dot">Nếu chẳng may "toang" job, quỹ dự phòng của bạn có thể "gánh" bạn trong bao lâu?</label>
+                            <div class="mt-2 space-y-2">
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Quỹ dự phòng" value="Dưới 3 tháng" required class="h-4 w-4"><span class="ml-3">Dưới 3 tháng.</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Quỹ dự phòng" value="3 - 6 tháng" class="h-4 w-4"><span class="ml-3">3 - 6 tháng.</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Quỹ dự phòng" value="6 - 12 tháng" class="h-4 w-4"><span class="ml-3">6 - 12 tháng.</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Quỹ dự phòng" value="Hơn 12 tháng" class="h-4 w-4"><span class="ml-3">Hơn 12 tháng.</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2 class="text-xl font-semibold section-title mb-4">Phần C: "Scan" Mục Tiêu & Chân Trời Đầu Tư (Đánh giá Investment Horizon)</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-md font-medium text-gray-700 required-dot">Mục tiêu tài chính quan trọng nhất của bạn trong 5-10 năm tới là gì?</label>
+                            <div class="mt-2 space-y-2">
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Mục tiêu tài chính" value="Tích lũy cho hưu trí an nhàn" required class="h-4 w-4"><span class="ml-3">Tích lũy cho hưu trí an nhàn</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Mục tiêu tài chính" value="Mua nhà/xe hoặc tài sản lớn" class="h-4 w-4"><span class="ml-3">Mua nhà/xe hoặc tài sản lớn</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Mục tiêu tài chính" value="Đầu tư cho giáo dục con cái" class="h-4 w-4"><span class="ml-3">Đầu tư cho giáo dục con cái</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Mục tiêu tài chính" value="Tối đa hóa lợi nhuận nhanh nhất" class="h-4 w-4"><span class="ml-3">Tối đa hóa lợi nhuận nhanh nhất có thể</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Mục tiêu tài chính" value="Tạo nguồn thu nhập thụ động" class="h-4 w-4"><span class="ml-3">Tạo nguồn thu nhập thụ động ổn định</span></label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-md font-medium text-gray-700 required-dot">Bạn dự định sẽ cần rút một phần lớn (>30%) vốn đầu tư trong khoảng thời gian nào?</label>
+                            <div class="mt-2 space-y-2">
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Thời gian rút vốn" value="Trong vòng 1 năm" required class="h-4 w-4"><span class="ml-3">Trong vòng 1 năm</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Thời gian rút vốn" value="Từ 1-3 năm" class="h-4 w-4"><span class="ml-3">Từ 1-3 năm</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Thời gian rút vốn" value="Từ 3-5 năm" class="h-4 w-4"><span class="ml-3">Từ 3-5 năm</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Thời gian rút vốn" value="Trên 5 năm" class="h-4 w-4"><span class="ml-3">Trên 5 năm / Không có kế hoạch cụ thể</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h2 class="text-xl font-semibold section-title mb-4">Phần D: "Đo" Độ Lì & Kinh Nghiệm (Đánh giá Risk Tolerance & Knowledge)</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-md font-medium text-gray-700 required-dot">Khi thị trường biến động mạnh, bạn thường làm gì?</label>
+                            <div class="mt-2 space-y-2">
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Phản ứng thị trường" value="Bán ngay để bảo toàn vốn" required class="h-4 w-4"><span class="ml-3">Bán ngay lập tức để bảo toàn vốn</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Phản ứng thị trường" value="Theo dõi sát sao và có thể giảm tỷ trọng nếu xấu đi" class="h-4 w-4"><span class="ml-3">Theo dõi sát sao và có thể giảm tỷ trọng nếu xấu đi</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Phản ứng thị trường" value="Bình tĩnh nắm giữ, tin vào dài hạn" class="h-4 w-4"><span class="ml-3">Bình tĩnh nắm giữ, tin vào chiến lược dài hạn</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Phản ứng thị trường" value="Coi đây là cơ hội để mua thêm cổ phiếu tốt với giá rẻ" class="h-4 w-4"><span class="ml-3">Coi đây là cơ hội để mua thêm cổ phiếu tốt với giá rẻ</span></label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-md font-medium text-gray-700 required-dot">Bạn đã từng "thực chiến" với các sản phẩm tài chính nào sau đây? (chọn tất cả các phương án đúng)</label>
+                            <div class="mt-2 space-y-2">
+                                <label class="checkbox-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="checkbox" name="Kinh nghiệm thực chiến" value="Gửi tiết kiệm, chứng chỉ tiền gửi" class="h-4 w-4 rounded"><span class="ml-3">Gửi tiết kiệm, chứng chỉ tiền gửi</span></label>
+                                <label class="checkbox-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="checkbox" name="Kinh nghiệm thực chiến" value="Vàng, Bất động sản" class="h-4 w-4 rounded"><span class="ml-3">Vàng, Bất động sản</span></label>
+                                <label class="checkbox-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="checkbox" name="Kinh nghiệm thực chiến" value="Trái phiếu doanh nghiệp" class="h-4 w-4 rounded"><span class="ml-3">Trái phiếu doanh nghiệp</span></label>
+                                <label class="checkbox-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="checkbox" name="Kinh nghiệm thực chiến" value="Cổ phiếu, Chứng chỉ quỹ" class="h-4 w-4 rounded"><span class="ml-3">Cổ phiếu, Chứng chỉ quỹ (ETF, Mở)</span></label>
+                                <label class="checkbox-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="checkbox" name="Kinh nghiệm thực chiến" value="Chứng khoán phái sinh, Forex" class="h-4 w-4 rounded"><span class="ml-3">Chứng khoán phái sinh, Forex, Crypto</span></label>
+                                <label class="checkbox-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="checkbox" name="Kinh nghiệm thực chiến" value="Tôi là "tấm chiếu mới", chưa đầu tư bao giờ" class="h-4 w-4 rounded"><span class="ml-3">Tôi là "tấm chiếu mới", chưa đầu tư bao giờ</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2 class="text-xl font-semibold section-title mb-4">Phần E: Lựa Chọn "Vũ Trụ" Đầu Tư</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-md font-medium text-gray-700 required-dot">Giả sử bạn đầu tư 1 tỷ VNĐ. Có 5 "vũ trụ" đầu tư sau đây với kết quả sau 1 năm. Bạn sẽ chọn "dịch chuyển" đến vũ trụ nào?</label>
+                            <div class="overflow-x-auto mt-4">
+                                <table class="min-w-full border border-gray-200 text-sm text-center">
+                                    <thead class="bg-gray-100 font-semibold"><tr><th class="p-2 border">Vũ trụ</th><th class="p-2 border">Lợi nhuận TB</th><th class="p-2 border">Tốt nhất</th><th class="p-2 border">Xấu nhất</th></tr></thead>
+                                    <tbody>
+                                        <tr><td class="p-2 border font-medium">1: An Toàn</td><td class="p-2 border text-green-600">+90 triệu (9%)</td><td class="p-2 border text-green-600">+630 triệu (63%)</td><td class="p-2 border text-red-600">-6 triệu (-0.6%)</td></tr>
+                                        <tr><td class="p-2 border font-medium">2: Thận Trọng</td><td class="p-2 border text-green-600">+140 triệu (14%)</td><td class="p-2 border text-green-600">+1100 triệu (110%)</td><td class="p-2 border text-red-600">-40 triệu (-4.1%)</td></tr>
+                                        <tr><td class="p-2 border font-medium">3: Cân Bằng</td><td class="p-2 border text-green-600">+200 triệu (20%)</td><td class="p-2 border text-green-600">+1710 triệu (171%)</td><td class="p-2 border text-red-600">-80 triệu (-7.7%)</td></tr>
+                                        <tr><td class="p-2 border font-medium">4: Tăng Trưởng</td><td class="p-2 border text-green-600">+240 triệu (24%)</td><td class="p-2 border text-green-600">+2210 triệu (221%)</td><td class="p-2 border text-red-600">-130 triệu (-13.1%)</td></tr>
+                                        <tr><td class="p-2 border font-medium">5: Mạo Hiểm</td><td class="p-2 border text-green-600">+290 triệu (29%)</td><td class="p-2 border text-green-600">+3060 triệu (306%)</td><td class="p-2 border text-red-600">-160 triệu (-15.5%)</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="mt-4 space-y-2">
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Vũ trụ đầu tư" value="Vũ trụ 1: An Toàn" required class="h-4 w-4"><span class="ml-3">Vũ trụ 1: An Toàn</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Vũ trụ đầu tư" value="Vũ trụ 2: Thận Trọng" class="h-4 w-4"><span class="ml-3">Vũ trụ 2: Thận Trọng</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Vũ trụ đầu tư" value="Vũ trụ 3: Cân Bằng" class="h-4 w-4"><span class="ml-3">Vũ trụ 3: Cân Bằng</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Vũ trụ đầu tư" value="Vũ trụ 4: Tăng Trưởng" class="h-4 w-4"><span class="ml-3">Vũ trụ 4: Tăng Trưởng</span></label>
+                                <label class="radio-label flex items-center p-3 border border-gray-200 rounded-md cursor-pointer"><input type="radio" name="Vũ trụ đầu tư" value="Vũ trụ 5: Mạo Hiểm" class="h-4 w-4"><span class="ml-3">Vũ trụ 5: Mạo Hiểm</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <label for="moreInfo" class="block text-md font-medium text-gray-700">Mô tả thêm về mục tiêu và phong cách đầu tư của Anh/Chị (nếu có)</label>
+                    <textarea id="moreInfo" name="Thông tin thêm" rows="4" class="form-input mt-1 block w-full rounded-md shadow-sm focus:ring"></textarea>
+                </div>
+
+                <div class="mt-8">
+                    <button type="submit" id="submitBtn" class="submit-btn w-full text-lg font-semibold py-3 px-4 rounded-md shadow-sm">
+                        Hoàn Thành & Gửi Khảo Sát
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div id="customModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 text-center max-w-sm mx-auto">
+            <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100">
+                <svg class="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl leading-6 font-bold text-gray-900 mt-5">Gửi thành công!</h3>
+            <div class="mt-3">
+                <p class="text-md text-gray-600">
+                    Cảm ơn anh/chị đã hoàn thành khảo sát. Kết quả đã được ghi nhận.
+                </p>
+            </div>
+            <div class="mt-6">
+                <button id="closeModalBtn" type="button" class="w-full inline-flex justify-center rounded-lg border border-transparent shadow-sm px-4 py-3 bg-gray-200 text-base font-semibold text-gray-800 hover:bg-gray-300 focus:outline-none sm:text-lg">
+                    Đóng
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxZyDDgeVpN-bvm6CjHPXHU8d5yEvNoD43iLjf9TUfrAdRaPWl4zz6Z_9YwXrqvW8Li/exec'; 
+        
+        const form = document.getElementById('surveyForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const modal = document.getElementById('customModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        function showModal() {
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Đang gửi...';
+
+            fetch(SCRIPT_URL, { 
+                method: 'POST', 
+                body: new FormData(form)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    showModal();
+                    form.reset(); 
+                } else {
+                    console.error('Lỗi từ Apps Script:', data.error);
+                    alert('Có lỗi xảy ra, vui lòng thử lại: ' + (data.error.message || data.error));
+                }
+            })
+            .catch(error => {
+                console.error('Lỗi khi gửi form:', error);
+                alert('Đã xảy ra lỗi mạng. Vui lòng kiểm tra kết nối và thử lại.');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Hoàn Thành & Gửi Khảo Sát';
+            });
+        });
+    </script>
+</body>
+</html>
